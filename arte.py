@@ -22,11 +22,11 @@ def get_arte_concert_videos():
 	return arte_videos.json()['videos']
 
 def get_arte_video_url(programId):
-	print programId
+
 	arte_access_token = get_arte_auth_token()
 	arte_player_url = 'https://api.arte.tv/api/opa/v2/videoStreams?programId=%s&reassembly=A&platform=ALW&channel=DE&language=de&kind=SHOW&access_token=%s' % (programId, arte_access_token)
 	arte_player_html_request = requests.get(arte_player_url)
-	print arte_player_html_request.json().keys()
+
 	video_list = arte_player_html_request.json()['videoStreams']
 	video_data = video_list[0]
 
