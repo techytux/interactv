@@ -7,26 +7,68 @@
             "clap": "0"
         },
         "8": {
-            "hands": "1",
-            "guitar": "1",
+            "hands": "0",
+            "guitar": "0",
             "drums": "0",
             "clap": "1"
         },
+        "17": {
+            "hands": "1",
+            "guitar": "0",
+            "drums": "0",
+            "clap": "0"
+        }
         "30": {
             "hands": "0",
             "guitar": "0",
             "drums": "1",
             "clap": "0"
         },
-        "60": {
+        "40": {
+            "hands": "0",
+            "guitar": "1",
+            "drums": "0",
+            "clap": "0"
+        },
+        "54": {
             "hands": "1",
             "guitar": "0",
             "drums": "0",
             "clap": "0"
         },
-        "76": {
+        "60": {
             "hands": "0",
             "guitar": "1",
+            "drums": "0",
+            "clap": "0"
+        },
+        "67": {
+            "hands": "0",
+            "guitar": "0",
+            "drums": "1",
+            "clap": "0"
+        },
+        "72": {
+            "hands": "0",
+            "guitar": "1",
+            "drums": "0",
+            "clap": "0"
+        },
+        "75": {
+            "hands": "0",
+            "guitar": "0",
+            "drums": "1",
+            "clap": "0"
+        },
+        "80": {
+            "hands": "0",
+            "guitar": "1",
+            "drums": "0",
+            "clap": "0"
+        },
+        "84": {
+            "hands": "1",
+            "guitar": "0",
             "drums": "0",
             "clap": "0"
         },
@@ -42,53 +84,95 @@
             "drums": "0",
             "clap": "0"
         },
-        "108": {
+        "103": {
             "hands": "0",
             "guitar": "0",
             "drums": "0",
             "clap": "1"
         },
-        "118": {
-            "hands": "1",
-            "guitar": "1",
+        "117": {
+            "hands": "0",
+            "guitar": "0",
             "drums": "1",
             "clap": "0"
         },
-        "126": {
+        "121": {
             "hands": "0",
             "guitar": "1",
             "drums": "1",
             "clap": "0"
         },
-        "146": {
+        "128": {
+            "hands": "0",
+            "guitar": "1",
+            "drums": "1",
+            "clap": "0"
+        },
+        "130": {
             "hands": "1",
             "guitar": "0",
             "drums": "0",
             "clap": "0"
         },
-        "156": {
-            "hands": "0",
-            "guitar": "0",
-            "drums": "1",
-            "clap": "0"
-        },
-        "166": {
+        "140": {
             "hands": "0",
             "guitar": "1",
             "drums": "0",
             "clap": "0"
         },
-        "172": {
+        "145": {
+            "hands": "1",
+            "guitar": "0",
+            "drums": "0",
+            "clap": "0"
+        },
+        "155": {
             "hands": "0",
             "guitar": "0",
             "drums": "1",
             "clap": "0"
         },
-        "188": {
+        "162": {
+            "hands": "0",
+            "guitar": "1",
+            "drums": "0",
+            "clap": "0"
+        },
+        "169": {
+            "hands": "0",
+            "guitar": "0",
+            "drums": "1",
+            "clap": "0"
+        },
+        "173": {
             "hands": "1",
             "guitar": "0",
             "drums": "0",
             "clap": "0"
-        }
+        },
+        "176": {
+            "hands": "0",
+            "guitar": "1",
+            "drums": "0",
+            "clap": "0"
+        },
+        "182": {
+            "hands": "1",
+            "guitar": "0",
+            "drums": "0",
+            "clap": "0"
+        },
+        "182": {
+            "hands": "1",
+            "guitar": "1",
+            "drums": "1",
+            "clap": "0"
+        },
+        "196": {
+            "hands": "1",
+            "guitar": "0",
+            "drums": "0",
+            "clap": "1"
+        },
     }
 }
