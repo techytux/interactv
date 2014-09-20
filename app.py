@@ -2,6 +2,7 @@
 # Imports
 #------------------------------------------------------------------------------#
 
+import os
 from flask import * # do not use '*'; actually input the dependencies
 import logging
 from logging import Formatter, FileHandler
@@ -42,6 +43,11 @@ def login_required(test):
 def index():
     videos = arte.get_arte_concert_videos()
     return render_template('index1.html', videos=videos)
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 @app.route("/<program_id>")
 def player_page(program_id):
