@@ -24,6 +24,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         /// <summary> Name of the discrete gesture in the database that we want to track </summary>
         private readonly string[] recognizedGesturesNames = new string[4] { "Guitar", "Drum", "HandsUp","Clap" };
 
+        private string lastData = "";
         private static string APP_ID = "90155";
         private static string APP_KEY = "d82660399feaf7417ab5";
         private static string APP_SECRET = "eab6cab9e3f33f7176ce";
@@ -230,7 +231,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             string event_string = "gesture_recognized";
             JavaScriptSerializer serializer = new JavaScriptSerializer();
             GestureStatus status = new GestureStatus();
-            ///"Guitar", "Drum", "HandsUp","Clap"
+            ///"Guitar", "Drum", "HandsUp","Clap" sorry for that code, I was forced
             if (gesture.Equals("Guitar"))
             {
                 status.guitar = confidence.ToString();
@@ -247,9 +248,13 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             {
                 status.clap = confidence.ToString();
             } 
-            object data = serializer.Serialize(status);
+            string data = serializer.Serialize(status);
             
-            this.pusherInstance.Trigger(channels, event_string, data);
+            if (!data.Equals(lastData)) {
+                this.lastData = data;
+                this.pusherInstance.Trigger(channels, event_string, data);
+            }
+            
         }
 
         /// <summary>
