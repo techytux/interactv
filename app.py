@@ -3,7 +3,6 @@
 #------------------------------------------------------------------------------#
 
 from flask import * # do not use '*'; actually input the dependencies
-from flask.ext.sqlalchemy import SQLAlchemy
 import logging
 from logging import Formatter, FileHandler
 import arte
