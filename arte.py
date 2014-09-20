@@ -1,4 +1,3 @@
-from requests_oauthlib import OAuth2Session
 import requests, json
 
 arte_client_id = '54170bf33b78248f66681914_2dy4hjxvrjk0ow4o44wocccs4cgossok84k8ogso0wcoc80sss'
