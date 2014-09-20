@@ -1,0 +1,10 @@
+App Credentials
+These credentials give you access to the Pusher API. For more information check the documentation on how to use these.
+
+app_id = '90155'
+Access Tokens
+
+If a token becomes compromised, you can create a new key/secret pair. You will be able to delete the old token when you've updated your app.
+
+key = 'd82660399feaf7417ab5'
+secret = 'eab6cab9e3f33f7176ce'
