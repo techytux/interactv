@@ -1,6 +1,5 @@
 window.stuff = null;
 (function() {
-    var counter = 0;
     var timecodeData = null;
     var lastTimecodeData = null;
     var guitarAlert = null,
@@ -8,7 +7,7 @@ window.stuff = null;
         handsAlert = null,
         clapAlert = null;
     var points = 0;
-
+    var mplayer = videojs('example_video_1');
     $.getJSON( "static/timecode.json", function(data) {
         timecodeData = data.timecode;
         lastTimecodeData = timecodeData['0'];
@@ -44,8 +43,10 @@ window.stuff = null;
 
     var comparator = setInterval(function () {timeComparator()}, 1000);
     var timeComparator = function () {
-        if (timecodeData.hasOwnProperty(counter) ) {
-            lastTimecodeData = timecodeData[counter];
+        time_counter = Math.floor(mplayer.currentTime());
+        console.log("vcurrent time "+ time_counter)
+        if (timecodeData.hasOwnProperty(time_counter) ) {
+            lastTimecodeData = timecodeData[time_counter];
         }
         var alertString = '';
         for (var action in lastTimecodeData) {
@@ -67,10 +68,7 @@ window.stuff = null;
         if (handsAlert > 0 && lastTimecodeData.hands == 1) {
             points = points + 1;
         }
-        //console.log(counter);
         
-
-        counter = counter + 1;
         $('#points').text(points);
         $('#steps').text(alertString);
         console.log(points);
