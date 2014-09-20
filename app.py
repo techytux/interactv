@@ -47,6 +47,10 @@ def index():
     videos = arte.get_arte_concert_videos()
     return render_template('index1.html', videos=videos)
 
+@app.route("/staticplayer.html")
+def staticvideoHtml():
+    return render_template('staticplayer.html')
+
 @app.route("/video/<program_id>")
 def player_page(program_id):
     video = arte.get_arte_video_url(program_id)
