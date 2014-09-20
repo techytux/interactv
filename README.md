@@ -1,7 +1,7 @@
 interacTV
 =================
 
-Project during the TvHackdy
+Project during the TvHackday
 
 Basic Requirements
 -----------------
