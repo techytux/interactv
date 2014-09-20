@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>JOIN TV</title>
+    <title>Interac TV</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
@@ -31,7 +31,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">JOIN TV</a>
+          <a class="navbar-brand" href="#">Interac TV</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -49,23 +49,35 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <h1>JOIN TV</h1>
+        <h1>Interac TV</h1>
         <p>Some description</p>
 
       </div>
 
         <div class="row">
+        <div class="col-sm-6 col-md-4">
+                
+            <div class="thumbnail" style="height:336px">
+                <a href="/staticvideo">
+                <img alt="100%x200" src="../static/img/subways.jpg" style="height: 200px; width: 100%; display: block;">
+                </a>
+                <div class="caption">
+                    <h3>Hurricane 2014: The Subways</h3>
+                    
+                </div>
+            </div>
+              
+            </div>
             {% for video in videos %}
             <div class="col-sm-6 col-md-4">
                 
-                <div class="thumbnail">
-                    <a href="{{video.programId}}">
+                <div class="thumbnail" style="height:336px">
+                    <a href="/video/{{video.programId}}">
                     <img alt="100%x200" src="{{video.mainImage.url}}" style="height: 200px; width: 100%; display: block;">
                     </a>
                     <div class="caption">
                         <h3>{{video.title}}</h3>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                        
                     </div>
                 </div>
               

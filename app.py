@@ -7,7 +7,10 @@ from flask import * # do not use '*'; actually input the dependencies
 import logging
 from logging import Formatter, FileHandler
 import arte
-
+from flask import stream_with_context
+import mimetypes
+import os
+import re
 #------------------------------------------------------------------------------#
 # App Config
 #------------------------------------------------------------------------------#
@@ -44,15 +47,48 @@ def index():
     videos = arte.get_arte_concert_videos()
     return render_template('index1.html', videos=videos)
 
-@app.route('/favicon.ico')
-def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'),
-                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
-
-@app.route("/<program_id>")
+@app.route("/video/<program_id>")
 def player_page(program_id):
     video = arte.get_arte_video_url(program_id)
     return render_template('player.html', video=video)
+
+@app.route("/staticvideo")
+def send_file_partial():
+    """ 
+        Simple wrapper around send_file which handles HTTP 206 Partial Content
+        (byte ranges)
+        TODO: handle all send_file args, mirror send_file's error handling
+        (if it has any)
+    """
+    path = 'static/mov/interacTV.mp4'
+    range_header = request.headers.get('Range', None)
+    if not range_header: return send_file(path)
+    
+    size = os.path.getsize(path)    
+    byte1, byte2 = 0, None
+    
+    m = re.search('(\d+)-(\d*)', range_header)
+    g = m.groups()
+    
+    if g[0]: byte1 = int(g[0])
+    if g[1]: byte2 = int(g[1])
+
+    length = size - byte1
+    if byte2 is not None:
+        length = byte2 - byte1
+    
+    data = None
+    with open(path, 'rb') as f:
+        f.seek(byte1)
+        data = f.read(length)
+
+    rv = Response(data, 
+        206,
+        mimetype=mimetypes.guess_type(path)[0], 
+        direct_passthrough=True)
+    rv.headers.add('Content-Range', 'bytes {0}-{1}/{2}'.format(byte1, byte1 + length - 1, size))
+
+    return rv
 
 '''
 @app.route("/login")
@@ -92,9 +128,8 @@ if not app.debug:
 if __name__ == '__main__':
     app.run()
 
-# or specify port
-'''
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
-'''
+
