@@ -35,11 +35,25 @@ window.stuff = null;
         handsAlert = gesture_data.hands;
 
     });
+    var alertText = {
+            'guitar' : 'Play Guitar !', 
+            'hands': 'Raise your hands !',
+            'clap': 'Clap your hands !',
+            'drums': 'Play the drums !'
+        }
 
     var comparator = setInterval(function () {timeComparator()}, 1000);
     var timeComparator = function () {
         if (timecodeData.hasOwnProperty(counter) ) {
             lastTimecodeData = timecodeData[counter];
+        }
+        var alertString = '';
+        for (var action in lastTimecodeData) {
+            if(lastTimecodeData.hasOwnProperty(action)) {
+                if(lastTimecodeData[action] == 1) {
+                    alertString += ' ' + alertText[action];
+                }
+            }
         }
         if (guitarAlert > 0 && lastTimecodeData.guitar == 1) {
             points = points + 1;
@@ -58,6 +72,7 @@ window.stuff = null;
 
         counter = counter + 1;
         $('#points').text(points);
+        $('#steps').text(alertString);
         console.log(points);
     }
 
