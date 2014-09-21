@@ -83,6 +83,6 @@ window.mplayer = null;
         
     }
 
-    var comparator = setInterval(timeComparator, 1000);
+    var comparator = setInterval(timeComparator, 300);
 
 })();
