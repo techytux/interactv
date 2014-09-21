@@ -6,11 +6,17 @@
             "drums": "0",
             "clap": "0"
         },
-        "8": {
+        "6": {
             "hands": "0",
             "guitar": "0",
             "drums": "0",
             "clap": "1"
+        },
+        "11": {
+            "hands": "0",
+            "guitar": "1",
+            "drums": "0",
+            "clap": "0"
         },
         "17": {
             "hands": "1",
@@ -18,14 +24,44 @@
             "drums": "0",
             "clap": "0"
         },
-        "30": {
+        "21": {
+            "hands": "0",
+            "guitar": "1",
+            "drums": "0",
+            "clap": "0"
+        },
+        "24": {
+            "hands": "1",
+            "guitar": "0",
+            "drums": "0",
+            "clap": "0"
+        },
+        "27": {
             "hands": "0",
             "guitar": "0",
             "drums": "1",
             "clap": "0"
         },
-        "40": {
+        "31": {
             "hands": "0",
+            "guitar": "1",
+            "drums": "0",
+            "clap": "0"
+        },
+        "35": {
+            "hands": "0",
+            "guitar": "1",
+            "drums": "1",
+            "clap": "0"
+        },
+        "42": {
+            "hands": "1",
+            "guitar": "0",
+            "drums": "0",
+            "clap": "0"
+        },
+        "46": {
+            "hands": "1",
             "guitar": "1",
             "drums": "0",
             "clap": "0"
@@ -36,14 +72,26 @@
             "drums": "0",
             "clap": "0"
         },
+        "57": {
+            "hands": "0",
+            "guitar": "0",
+            "drums": "0",
+            "clap": "1"
+        },
         "60": {
             "hands": "0",
             "guitar": "1",
             "drums": "0",
             "clap": "0"
         },
-        "67": {
+        "64": {
             "hands": "0",
+            "guitar": "0",
+            "drums": "1",
+            "clap": "0"
+        },
+        "68": {
+            "hands": "1",
             "guitar": "0",
             "drums": "1",
             "clap": "0"
