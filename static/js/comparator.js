@@ -29,7 +29,7 @@ window.mplayer = null;
     var channel = pusher.subscribe('interactv');
     channel.bind('gesture_recognized', function(data) {
         console.log(data);
-        var gesture_data = data;
+        var gesture_data = JSON.parse(data);
         guitarAlert = gesture_data.guitar;
         drumAlert = gesture_data.drums;
         clapAlert = gesture_data.clap;
@@ -51,7 +51,7 @@ window.mplayer = null;
         } else {
             time_counter = Math.floor(mplayer.currentTime());
 
-            console.log("vcurrent time "+ time_counter)
+            console.log("Player current time "+ time_counter);
             if (timecodeData.hasOwnProperty(time_counter) ) {
                 lastTimecodeData = timecodeData[time_counter];
             }
