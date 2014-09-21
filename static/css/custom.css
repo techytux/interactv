@@ -1,5 +1,6 @@
 .backgroundLogo {
-  background-image: url('../img/wolf_screen.jpg');
+  background: url('../img/wolf_screen.jpg') no-repeat;
+  background-position: center;
   padding-top: 15px;
 }
 
