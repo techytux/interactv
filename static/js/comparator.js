@@ -43,7 +43,6 @@ window.mplayer = null;
             'drums': 'Play the drums !'
         }
 
-    var comparator = setInterval(function () {timeComparator()}, 1000);
     var timeComparator = function () {
         console.log("Player is paused:" + mplayer.paused());
         if(mplayer.paused()) {
@@ -83,5 +82,7 @@ window.mplayer = null;
         
         
     }
+
+    var comparator = setInterval(timeComparator, 1000);
 
 })();
