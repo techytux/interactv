@@ -1,0 +1,13 @@
+.backgroundLogo {
+  background-image: url('../img/wolf_screen.jpg');
+  padding-top: 15px;
+}
+
+
+.headline {
+  color: #FFFFFF;
+  background-color: black;
+  padding: 10px;
+  font-size: 300%;
+  margin: 0 0 10px 10px;
+}
